@@ -1,0 +1,102 @@
+ body {
+      margin: 0;
+      font-family: 'Noto Sans Kannada', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background: #ff6600;
+      color: white;
+      padding: 20px;
+      text-align: conrner;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+
+    }
+    header nav {
+        text-align: right;
+        margin-top: 10px;
+    }
+    header img {
+      max-height: 100px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .menu > div {
+       transition: transform 0.2s;
+    }
+    .menu > div:hover {
+       transform: scale(1.10);
+    }
+    .button {
+     padding: 17px 40px;
+     border-radius: 50px;
+     cursor: pointer;
+     border: 0;
+     background-color: white;
+     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+     letter-spacing: 1.5px;
+     font-size: 15px;
+     transition: all 0.5s ease;
+    }
+    .button:hover {
+       background-color: hsl(112, 100%, 66%);
+       color: hsl(0, 0%, 100%);
+       box-shadow: rgb(3, 134, 3) 0px 0px 20px 0px;
+       transform: translateY(-3px);
+    }
+
+    .button:hover {
+       letter-spacing: 3px;
+       background-color: hsl(118, 92%, 20%);
+       color: hsl(0, 0%, 100%);
+       box-shadow: rgb(4, 143, 41) 0px 7px 29px 0px;
+    }
+
+    .button:active {
+       letter-spacing: 3px;
+       background-color:hsl(118, 92%, 20%);
+       color: hsl(135, 97%, 25%);
+       box-shadow: rgb(4, 143, 41) 0px 7px 29px 0px;
+       transform: translateY(10px);
+       transition: 100ms;
+    }
+
+    .dish {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-image: auto;
+    }
+    footer {
+      background: #5a4242;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 15px;
+    }
