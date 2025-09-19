@@ -15,7 +15,11 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh "mvn compile"
+                sh '''
+                mvn compile         
+                mvn test             
+                mvn package
+                '''
             }
         }
 
@@ -23,9 +27,7 @@ pipeline {
             steps {
                 sh '''
                 mvn clean install    
-                mvn compile          
-                mvn test             
-                mvn package 
+                
                 '''
             }
         }
