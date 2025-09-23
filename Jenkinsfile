@@ -16,13 +16,13 @@ pipeline {
        
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t hanamanth866/project:1 ."
+                sh "docker build -t hanamanth866/project:2 ."
             }
         }
 
      stage('Docker image scan'){
             steps {
-                    sh 'trivy image --format table -o trivy-image-report.html hanamanth866/project:1'
+                    sh 'trivy image --format table -o trivy-image-report.html hanamanth866/project:2'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
                 sh '''
                     docker stop c1 || true
                     docker rm c1 || true
-                    docker run -it -d --name c1 -p 9002:8080 hanamanth866/project:1
+                    docker run -it -d --name c1 -p 9002:8080 hanamanth866/project:2
                 '''
             }
         }
@@ -49,7 +49,7 @@ pipeline {
 
         stage('Push Image to Repository') {
             steps {
-                sh 'docker push hanamanth866/project:1'
+                sh 'docker push hanamanth866/project:2'
             }
         }
     }
