@@ -13,25 +13,7 @@ pipeline {
             }
         }
 
-        stage('Compile') {
-            steps {
-                sh '''
-                mvn compile         
-                mvn test             
-                mvn package
-                '''
-            }
-        }
-
-        stage('Build') {
-            steps {
-                sh '''
-                mvn clean install    
-                
-                '''
-            }
-        }
-
+       
         stage('Build Docker Image') {
             steps {
                 sh "docker build -t hanamanth866/project:1 ."
